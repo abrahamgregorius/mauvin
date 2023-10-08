@@ -1,0 +1,335 @@
+:root {
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --color-primary: rgb(178, 44, 44);
+    --color-primary-hover: rgb(240, 46, 46);
+    --color-body: #bbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-body);
+    background: 
+        /* linear-gradient(150deg, transparent 500px, rgb(49, 49, 255) 500px, rgba(45, 104, 123, 0.7) 600px, transparent 400px), */
+        radial-gradient(circle at 0 500px, rgba(128, 0, 128, 0.421), transparent 600px),
+        radial-gradient(circle at 70% 100px, rgba(0, 0, 255, 0.41), transparent 800px),
+        radial-gradient(circle at 100% 400px, rgba(128, 0, 128, 0.421) 600px, transparent 600px),
+        radial-gradient(circle at 30% 700px, rgba(0, 0, 255, 0.41), transparent 300px),
+        radial-gradient(circle at 0 800px, rgba(128, 0, 128, 0.421) 600px, transparent 600px),
+        radial-gradient(circle at 100% 1100px, rgba(0, 0, 255, 0.41), transparent 500px),
+        radial-gradient(circle at 90% 1800px, rgba(128, 0, 128, 0.421) 600px, transparent 600px),
+        radial-gradient(circle at 40% 2000px, rgba(0, 0, 255, 0.41), transparent 300px),
+        radial-gradient(circle at 10% 2700px, rgba(128, 0, 128, 0.421) 600px, transparent 600px),
+        linear-gradient(to bottom, rgb(27, 6, 52), rgb(14, 14, 75));
+    }
+
+header {
+    position: relative;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header-menu {
+    background-color: #fbf3f3;
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.header-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header-menu li a {
+    text-decoration: none;
+    display: block;
+    padding: .5rem .3rem;
+    color: black;
+}
+
+.header-menu li a:hover {
+    color: var(--color-primary-hover);
+}
+
+.btn {
+    padding: .3rem .6rem;
+    border-radius: .3rem;
+    color:white;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary-hover);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-project-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.all-projects {
+    display: block;
+    text-align: center;
+}
+
+.logo {
+   font-weight: bold; 
+   color: white;
+}
+
+.header-menu {
+    display: none;
+}
+
+#toggle-checkbox:checked ~ .header-menu {
+    display: block;
+}
+
+#toggle-checkbox {
+    display: none;
+}
+
+.page-numbers {
+    color: var(--color-body);
+}
+
+.page-numbers.current {
+    color: white
+}
+
+.mb-5 {
+    margin-bottom: 1rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+#hero {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 6vw, 5rem);
+}
+
+.hero-desc {
+    color: var(--color-body);
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-header {
+    text-align: center;
+}
+
+.custom-logo {
+    height: 100px;
+    width: auto;
+}
+
+.card {
+    backdrop-filter: blur(2rem);
+    background-color: #404f875e;
+    border: 1px solid #777;
+    border-radius: .4rem;
+}
+
+.projects .card img {
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+}
+
+.card-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+}
+
+.card-image {
+    margin-bottom: .5rem;
+}
+
+.card-title h2 a{
+    color: white; 
+    text-decoration: none;
+}
+
+.card-body p {
+    font-size: .9rem;
+}
+
+.projects .card-body {
+    border: 0; 
+    padding: 1rem;
+}
+
+.projects .card-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.social-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.wpcf7 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .section-desc {
+    color: var(--color-body);
+}
+
+footer {
+    border-top: 1px solid #888;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.footer-main {
+    padding: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .4rem 0;
+}
+
+footer .logo a {
+    font-style:italic;
+}
+
+.footer-copyright {
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-group ul{
+    list-style: none;
+}
+
+.footer-group ul li a{
+    color: var(--color-body);
+}
+
+.footer-group ul li a:hover {
+    color: white;
+}
+
+.footer-logo {
+    color: white;
+    text-decoration: none;
+}
+
+.single-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+}
+
+
+#single img {
+    margin: 0 auto;
+    width: min(100%, 500px);
+}
+
+@media screen and (min-width: 768px) {
+    .grid-cols-lg-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cols-lg-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-cols-lg-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .header-menu ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header-menu ul li a {
+        color: white;
+    }
+
+    .header-menu {
+        position: static;
+        background-color: transparent;
+        display: block;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+}
